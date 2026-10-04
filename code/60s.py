@@ -3,10 +3,10 @@
 
 import subprocess
 
-lib1 = "lavfi" 
-lib2 = "anullsrc"
+filter = "lavfi" 
+lib = "anullsrc"
 time = "60s"
 output = "out/60s.wav"
 
-hi = subprocess.run(["ffmpeg", "-f", lib1, "-i", lib2, "-t", time, output])
+hi = subprocess.run(["ffmpeg", "-f", filter, "-i", lib, "-t", time, output])
 print(hi)
